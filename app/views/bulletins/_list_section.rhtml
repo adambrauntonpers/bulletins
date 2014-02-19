@@ -1,0 +1,40 @@
+<tr class="<%= cycle('odd','even') %>">
+	<td>
+
+		<table width="790" border="0" cellpadding="2" cellspacing="5">
+			<tr>
+				<td width="45%">
+					<span class="bulletinTitle">From:&nbsp;<b><%=list_section.from%></b><br />
+					<% if list_section.validfrom == list_section.validto %>
+						<span class="bulletinValidDate">Valid on <%=nice_date(list_section.validfrom)%></span>
+					<% else %>
+						<span class="bulletinValidDate">Valid from <%=nice_date(list_section.validfrom)%> to <%=nice_date(list_section.validto)%></span>
+					<% end %>
+				</td>
+				<td width="55%">
+					<span class="bulletinTitle">To:&nbsp;<b>
+					    <%=list_section.from_list%>
+					    <% if list_section.freetext != "" %>
+							: <%= list_section.freetext%>
+						<% end %>
+					
+					</b></span> 
+				</td>
+			</tr>
+			<tr>
+				<td class="bulletinBody" colspan="2" style="word-wrap: break-word;">
+					<%= simple_format list_section.message %>
+				</td>
+			</tr>     
+			<% if session[:teacher] == list_section.createdBy or session[:superuser] == 'true' %>				
+			<tr>
+				<td align="right" colspan="2">
+					Created by <%=list_section.createdBy%> | <%= link_to 'Edit', :action => 'edit', :id => list_section %> |
+					<a href="/bulletins/destroy/<%=list_section.id%>" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit(); };return false;">Destroy</a>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</td>
+</tr>
+<tr><td style="height:10px"></td></tr>

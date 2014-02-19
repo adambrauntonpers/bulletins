@@ -1,0 +1,38 @@
+<%= error_messages_for 'login' %>
+
+
+<%= form_tag :action => "login" %>
+
+
+<h2>Authorised access only</h2>
+<br /><br /><br />
+<table align="center">
+    <tr>
+        <td>
+            Network username:
+        </td>
+        <td>
+            <input type="text" name="username" id="username" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Network password:
+        </td>
+        <td>
+            <input type="password" name="password" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right">
+            <input type="submit" value="Login" />
+            <input type="button" value="Cancel" onclick="window.location = '/bulletins'" />
+        </td>
+    </tr>
+</table>
+
+</form>
+
+<script>
+	document.getElementById('username').focus();
+</script>

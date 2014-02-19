@@ -1,0 +1,18 @@
+<tr>
+	<td width="40%" valign="top">
+		<b>From:</b> <%=print_section.from%> &nbsp;&nbsp; 
+	</td>
+	<td width="50%" valign="top">
+		<b>To:</b>
+		<%=print_section.from_list%>
+	    <% if print_section.freetext != "" %>
+			: <%= print_section.freetext%>
+		<% end %>
+	</td>
+</tr>
+<tr>
+	<td colspan="2" style="font-size:12px">
+		<%= simple_format print_section.message %>
+		<hr />
+	</td>
+</tr>

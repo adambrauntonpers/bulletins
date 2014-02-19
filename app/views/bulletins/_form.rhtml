@@ -1,0 +1,120 @@
+<br /><br />
+<%= error_messages_for 'bulletin' %>
+
+<script>
+    function clickEveryone() {
+        if (document.getElementById('everyone').checked == false) {
+            document.getElementById('bulletin_year7').checked = false;
+            document.getElementById('bulletin_year8').checked = false;
+            document.getElementById('bulletin_year9').checked = false;
+            document.getElementById('bulletin_year10').checked = false;
+            document.getElementById('bulletin_year11').checked = false;
+        } else {
+            document.getElementById('bulletin_year7').checked = true;
+            document.getElementById('bulletin_year8').checked = true;
+            document.getElementById('bulletin_year9').checked = true;
+            document.getElementById('bulletin_year10').checked = true;
+            document.getElementById('bulletin_year11').checked = true;
+        }
+    }
+	function checkAll() {
+		if (document.getElementById('bulletin_year7').checked == true && document.getElementById('bulletin_year8').checked == true && document.getElementById('bulletin_year9').checked == true && document.getElementById('bulletin_year10').checked == true && document.getElementById('bulletin_year11').checked == true) {
+			document.getElementById('everyone').checked = true;
+		} else {
+			document.getElementById('everyone').checked = false;
+		}
+	
+	}
+</script>
+<!--[form:bulletin]-->
+
+
+<p><span class="entryform">Please select relevant year(s)</span><br />
+<table><tr><td>			
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="3"><input type="checkbox" id="everyone" onclick="clickEveryone()" /> <label for="everyone">All years</label></td>
+	</tr>
+	<tr>
+		<td><%= check_box(:bulletin, :year7, {:onclick =>"checkAll()"}) %> <label for="bulletin_year7">Year 7</label> &nbsp;&nbsp;&nbsp;</td>
+		<td><%= check_box(:bulletin, :year8, {:onclick =>"checkAll()"}) %> <label for="bulletin_year8">Year 8</label> &nbsp;&nbsp;&nbsp;</td>
+		<td><%= check_box(:bulletin, :year9, {:onclick =>"checkAll()"}) %> <label for="bulletin_year9">Year 9</label> &nbsp;&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+		<td><%= check_box(:bulletin, :year10, {:onclick =>"checkAll()"}) %> <label for="bulletin_year10">Year 10</label> &nbsp;&nbsp;&nbsp;</td>
+		<td><%= check_box(:bulletin, :year11, {:onclick =>"checkAll()"}) %> <label for="bulletin_year11">Year 11</label> &nbsp;&nbsp;&nbsp;</td>
+		<td></td>
+	</tr>	
+</table>
+	
+	
+</td>
+<td width="50">&nbsp;</td>
+<td valign="middle" style="vertical-align:bottom">
+<%= text_field 'bulletin', 'freetext'  %>
+</td></tr></table>
+</p>
+
+
+<p><span class="entryform">From</span><br />
+<%= text_field 'bulletin', 'from'  %></p>
+
+<p><span class="entryform">Message</span><br />
+<%= text_area 'bulletin', 'message', {:cols => "60", :rows => "6"}  %></p>
+
+<p><span class="entryform">This message will appear:</span><br />
+
+<%= radio_button(:bulletin, :valid, 'tomorrow') %> <label for="bulletin_valid_tomorrow">Next day only (<%=nice_date(tomorrow())%>)</label> <br/>
+<%= radio_button(:bulletin, :valid, 'thisweek') %> <label for="bulletin_valid_thisweek">Rest of this week (<%=nice_date(todays_date())%> - <%=nice_date(end_of_the_week())%>)</label><br/>
+<%= radio_button(:bulletin, :valid, 'nextweek') %> <label for="bulletin_valid_nextweek">Every day next week (<%=nice_date(start_of_next_week())%> - <%=nice_date(end_of_next_week())%>)</label><br/>
+<%= radio_button(:bulletin, :valid, 'between') %> <label for="bulletin_valid_between">Between 
+<%= hidden_field 'bulletin', 'validfrom', {:id => 'f_date_c', :size => '20', :readonly => '1' } %>
+<span id="show_c"><%=@bulletin.validfrom.strftime("%A, %B %d, %Y")%></span>
+<img src="/images/img.gif" id="f_trigger_c"
+     style="cursor: pointer; border: 1px solid red;"
+     title="Date selector"
+     onmouseover="this.style.background='red';"
+     onmouseout="this.style.background=''" />
+<script type="text/javascript">
+	function chooseBetween(cal) {
+		document.getElementById('bulletin_valid_between').checked = true;
+		return true;
+	}
+    Calendar.setup({
+        inputField     :    "f_date_c",
+        ifFormat       :    "%B %e, %Y",
+        button         :    "f_trigger_c",
+        align          :    "Tl",
+		displayArea    :    "show_c",
+        daFormat       :    "%A, %B %d, %Y",
+		onUpdate	   : 	chooseBetween,
+        singleClick    :    true
+    });
+</script>
+
+and
+
+<%= hidden_field 'bulletin', 'validto', {:id => 'f_date_d', :size => '20', :readonly => '1'} %>
+<span id="show_d"><%=@bulletin.validto.strftime("%A, %B %d, %Y")%></span>
+<img src="/images/img.gif" id="f_trigger_d"
+     style="cursor: pointer; border: 1px solid red;"
+     title="Date selector"
+     onmouseover="this.style.background='red';"
+     onmouseout="this.style.background=''" />
+<script type="text/javascript">
+    Calendar.setup({
+        inputField     :    "f_date_d",
+        ifFormat       :    "%B %e, %Y",
+        button         :    "f_trigger_d",
+        align          :    "Tl",
+		displayArea    :    "show_d",
+        daFormat       :    "%A, %B %d, %Y",
+		onUpdate	   : 	chooseBetween,
+        singleClick    :    true
+    });
+</script>
+</label>
+<br/>
+</p>
+<!--[eoform:bulletin]-->
+

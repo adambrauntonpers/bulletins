@@ -1,0 +1,10 @@
+<h1>Add message to bulletin</h1>
+
+
+
+<form action="/bulletins/create" method="post">
+  <%= submit_tag "Add message to Bulletin" %> &nbsp;<input type="button" value="Cancel" onclick="window.location = '/bulletins'" />
+  <%= render :partial => 'form' %>
+  <br />
+  <%= submit_tag "Add message to Bulletin" %> &nbsp;<input type="button" value="Cancel" onclick="window.location = '/bulletins'" />
+</form>

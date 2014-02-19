@@ -1,0 +1,95 @@
+<script>
+	function popupPrintout(year) {
+		url = '/bulletins/printout?year=' + year;
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(url, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=500,left = 50,top = 50');");
+	}
+	function popupRegisterPrintout() {
+		url = '/bulletins/printregisters';
+		day = new Date();
+		id = day.getTime();
+		eval("page" + id + " = window.open(url, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=500,left = 50,top = 50');");
+	}
+	
+</script>
+<!--
+<table width="790" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<% if session[:teacher] != nil %>
+				Logged in as '<%=session[:teacher]%>'
+			<% end %>
+		</td>
+		<td align="right">
+			<% if session[:teacher] != nil %>
+			<% if session[:superuser] != nil %>
+		      <%= link_to 'Manage admins', :action => 'list', :controller => 'adminusers' %>
+		    <% end %>
+			<%= link_to 'Add new item', :action => 'new' %>
+		    <%= link_to 'Logout', :action => 'logout', :controller => "login" %>
+			
+			<a href="#" onclick="popupRegisterPrintout()">Register printout</a>
+			
+			<% if params[:year] == "11" %>
+				<a href="#" onclick="popupPrintout(11)">Print Year 11</a>
+			<% elsif params[:year] == "10" %>
+				<a href="#" onclick="popupPrintout(10)">Print Year 10</a>
+			<% elsif params[:year] == "9" %>
+				<a href="#" onclick="popupPrintout(9)">Print Year 9</a>
+			<% elsif params[:year] == "8" %>
+				<a href="#" onclick="popupPrintout(8)">Print Year 8</a>
+			<% elsif params[:year] == "7" %>
+				<a href="#" onclick="popupPrintout(7)">Print Year 7</a>
+			<% else %>
+				<a href="#" onclick="popupPrintout(0)">Print all</a>
+			<% end %>
+			
+		    <% else %>
+			<%= link_to 'Staff Login', :action => 'login', :controller => 'login' %>
+			<% end %>
+			
+		</td>
+	</tr>
+</table>
+-->
+
+<h1 align="center" style="color:#000000"><%=nice_date(@today)%></h1>
+<%= form_tag ({:action => 'list'}, :name => "changeyear") %>
+<select id="list_year" name="year" onchange="document.changeyear.submit()">
+	<option value="all"<%if params[:year] == "all"%> selected<%end%>>Bulletins for Everyone</option>
+	<option value="11"<%if params[:year] == "11"%> selected<%end%>>Bulletins for Year 11</option>
+	<option value="10"<%if params[:year] == "10"%> selected<%end%>>Bulletins for Year 10</option>
+	<option value="9"<%if params[:year] == "9"%> selected<%end%>>Bulletins for Year 9</option>
+	<option value="8"<%if params[:year] == "8"%> selected<%end%>>Bulletins for Year 8</option>
+	<option value="7"<%if params[:year] == "7"%> selected<%end%>>Bulletins for Year 7</option>
+</select>
+</form>
+<table width="790" cellpadding="0" cellspacing="0">
+
+	<%= render(:partial => "list_section", :collection => @bulletins_to_everyone) %>	
+	<%= render(:partial => "list_section", :collection => @bulletins_to_others) %>
+	
+	<% if session[:teacher] or session[:superuser] == 'true' %>	
+		<tr>
+			<td>
+				&nbsp;<br /><br /><br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				
+				<h1 align="center" style="color:#000000">Upcoming bulletins (all years)</h1>
+				<br />
+			</td>
+		</tr>
+		<%= render(:partial => "list_section", :collection => @upcoming_to_everyone) %>		
+		<%= render(:partial => "list_section", :collection => @upcoming_to_others) %>
+	<% end %>
+	
+</table>
+
+
+<br />
+
+

@@ -1,0 +1,21 @@
+<h1>Editing bulletins</h1>
+
+<input type="button" value="Save" onclick="document.getElementById('sub_edit').click()" />
+<input type="button" value="Cancel" onclick="window.location='/bulletins/list'" />
+
+<%= form_tag :action => 'update', :id => @bulletin %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit', :id => "sub_edit", :style => "display:none" %>
+</form>
+
+
+<input type="button" value="Save" onclick="document.getElementById('sub_edit').click()" />
+<input type="button" value="Cancel" onclick="window.location='/bulletins/list'" />
+
+<br /><br />
+
+<% if params[:action] == 'edit' %>
+<script>
+document.getElementById('bulletin_valid_between').checked = true;
+</script>
+<% end %>

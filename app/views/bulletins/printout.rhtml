@@ -1,0 +1,15 @@
+<span style="font-family:arial; font-size:14px">
+<% if @year == nil %>
+<p style="font-size:24px; font-weight:bold">Full pupil bulletin<br /><%=nice_date(@today)%> <%=@year%></p>
+<% else %>
+<p style="font-size:24px; font-weight:bold"><%=nice_date(@today)%> <%=@year%></p>
+<% end %>
+<hr />
+<table width="100%">
+	<%= render(:partial => "print_section", :collection => @bulletins_to_everyone) %>	
+	<%= render(:partial => "print_section", :collection => @bulletins_to_others) %>
+</table>
+
+</span>
+
+<script>window.print();</script>

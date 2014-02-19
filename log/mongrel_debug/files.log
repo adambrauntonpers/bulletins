@@ -1,0 +1,163 @@
+# Logfile created on Wed Jan 05 21:16:03 +0000 2011 by logger.rb/1.5.2.9
+D, [2011-01-05T21:16:03.171000 #5272] DEBUG -- : TRACING ON Wed Jan 05 21:16:03 +0000 2011
+D, [2011-01-05T21:16:03.217000 #5272] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T21:16:03.217000 #5272] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T21:16:05.170000 #5996] DEBUG -- : TRACING ON Wed Jan 05 21:16:05 +0000 2011
+D, [2011-01-05T21:16:05.186000 #5996] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T21:16:05.186000 #5996] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T21:16:10.872000 #4772] DEBUG -- : TRACING ON Wed Jan 05 21:16:10 +0000 2011
+D, [2011-01-05T21:16:10.903000 #4772] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T21:16:10.903000 #4772] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:09.002000 #7200] DEBUG -- : TRACING ON Wed Jan 05 23:54:09 +0000 2011
+D, [2011-01-05T23:54:09.064000 #7200] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:09.064000 #7200] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:14.141000 #5044] DEBUG -- : TRACING ON Wed Jan 05 23:54:14 +0000 2011
+D, [2011-01-05T23:54:14.173000 #5044] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:14.173000 #5044] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:19.812000 #4280] DEBUG -- : TRACING ON Wed Jan 05 23:54:19 +0000 2011
+D, [2011-01-05T23:54:19.843000 #4280] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:19.843000 #4280] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:25.748000 #7748] DEBUG -- : TRACING ON Wed Jan 05 23:54:25 +0000 2011
+D, [2011-01-05T23:54:25.764000 #7748] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:25.764000 #7748] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:31.434000 #4792] DEBUG -- : TRACING ON Wed Jan 05 23:54:31 +0000 2011
+D, [2011-01-05T23:54:31.450000 #4792] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:31.450000 #4792] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:37.073000 #7396] DEBUG -- : TRACING ON Wed Jan 05 23:54:37 +0000 2011
+D, [2011-01-05T23:54:37.089000 #7396] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:37.089000 #7396] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:42.744000 #5588] DEBUG -- : TRACING ON Wed Jan 05 23:54:42 +0000 2011
+D, [2011-01-05T23:54:42.775000 #5588] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:42.775000 #5588] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-05T23:54:48.743000 #6876] DEBUG -- : TRACING ON Wed Jan 05 23:54:48 +0000 2011
+D, [2011-01-05T23:54:48.758000 #6876] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-05T23:54:48.758000 #6876] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:19.089000 #7272] DEBUG -- : TRACING ON Thu Jan 06 20:19:19 +0000 2011
+D, [2011-01-06T20:19:19.151000 #7272] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:19.151000 #7272] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:22.432000 #1632] DEBUG -- : TRACING ON Thu Jan 06 20:19:22 +0000 2011
+D, [2011-01-06T20:19:22.463000 #1632] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:22.463000 #1632] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:28.196000 #7928] DEBUG -- : TRACING ON Thu Jan 06 20:19:28 +0000 2011
+D, [2011-01-06T20:19:28.227000 #7928] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:28.227000 #7928] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:34.054000 #5508] DEBUG -- : TRACING ON Thu Jan 06 20:19:34 +0000 2011
+D, [2011-01-06T20:19:34.085000 #5508] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:34.085000 #5508] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:39.787000 #7624] DEBUG -- : TRACING ON Thu Jan 06 20:19:39 +0000 2011
+D, [2011-01-06T20:19:39.803000 #7624] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:39.803000 #7624] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:45.598000 #6468] DEBUG -- : TRACING ON Thu Jan 06 20:19:45 +0000 2011
+D, [2011-01-06T20:19:45.629000 #6468] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:45.629000 #6468] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+
+D, [2011-01-06T20:19:51.315000 #4964] DEBUG -- : TRACING ON Thu Jan 06 20:19:51 +0000 2011
+D, [2011-01-06T20:19:51.331000 #4964] DEBUG -- : FILES OPEN AT EXIT
+D, [2011-01-06T20:19:51.331000 #4964] DEBUG -- : --- 
+log/mongrel_debug/objects.log: 2
+log/mongrel_debug/rails.log: 1
+log/mongrel_debug/files.log: 1
+log/mongrel_debug/threads.log: 1
+log/mongrel_debug/access.log: 1
+

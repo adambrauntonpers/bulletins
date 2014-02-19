@@ -1,0 +1,22 @@
+
+<h1>Administrators</h1>
+
+
+
+<table>
+  
+<% for adminuser in @adminusers %>
+  <tr>
+  <% for column in Adminuser.content_columns %>
+    <td width="200">'<%=h adminuser.send(column.name) %>'</td>
+  <% end %>
+    <td><%= link_to 'Delete', { :action => 'destroy', :id => adminuser }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New Administrator Username', :action => 'new' %> |
+<%= link_to 'Back', :action => 'list', :controller => "bulletins" %>

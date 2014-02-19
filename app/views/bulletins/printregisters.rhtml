@@ -1,0 +1,93 @@
+<span style="font-family:arial; font-size:14px">
+
+
+<p style="font-size:24px; font-weight:bold">Year 7 Pupil Bulletin<br /><%=nice_date(@today)%></p>
+<hr />
+<table width="100%">
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Today's bulletins<hr /></td></tr>
+      <% if @bulletins_to_everyoneToday.length() > 0 or @year7bulletinsToday.length() > 0   %>
+	  <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneToday) %>	
+	  <%= render(:partial => "print_section", :collection => @year7bulletinsToday) %>
+      <% else %>
+         <tr><td style="font-weight:bold; font-size:13px">No new bulletins today</td></tr>
+      <% end %>
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Repeated bulletins<hr /></td></tr>
+	<%= render(:partial => "print_section", :collection => @bulletins_to_everyoneRepeated) %>	
+	<%= render(:partial => "print_section", :collection => @year7bulletinsRepeated) %>
+</table>
+<p style="page-break-before: always">
+
+
+
+<p style="font-size:24px; font-weight:bold">Year 8 Pupil Bulletin<br /><%=nice_date(@today)%></p>
+<hr />
+<table width="100%">
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Today's bulletins<hr /></td></tr>
+      <% if @bulletins_to_everyoneToday.length() > 0 or @year8bulletinsToday.length() > 0   %>
+	  <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneToday) %>	
+	  <%= render(:partial => "print_section", :collection => @year8bulletinsToday) %>
+      <% else %>
+          <tr><td style="font-weight:bold; font-size:13px">No new bulletins today</td></tr>
+      <% end %>
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Repeated bulletins<hr /></td></tr>
+	<%= render(:partial => "print_section", :collection => @bulletins_to_everyoneRepeated) %>	
+	<%= render(:partial => "print_section", :collection => @year8bulletinsRepeated) %>
+</table>
+<p style="page-break-before: always">
+
+
+
+<p style="font-size:24px; font-weight:bold">Year 9 Pupil Bulletin<br /><%=nice_date(@today)%></p>
+<hr />
+<table width="100%">
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Today's bulletins<hr /></td></tr>
+      <% if @bulletins_to_everyoneToday.length() > 0 or @year9bulletinsToday.length() > 0   %>
+	  <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneToday) %>	
+	  <%= render(:partial => "print_section", :collection => @year9bulletinsToday) %>
+      <% else %>
+          <tr><td style="font-weight:bold; font-size:13px">No new bulletins today</td></tr>
+      <% end %>
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Repeated bulletins<hr /></td></tr>
+	<%= render(:partial => "print_section", :collection => @bulletins_to_everyoneRepeated) %>	
+	<%= render(:partial => "print_section", :collection => @year9bulletinsRepeated) %>
+</table>
+<p style="page-break-before: always">
+
+
+
+<p style="font-size:24px; font-weight:bold">Year 10 Pupil Bulletin<br /><%=nice_date(@today)%></p>
+<hr />
+<table width="100%">
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Today's bulletins<hr /></td></tr>
+       <% if @bulletins_to_everyoneToday.length() > 0 or @year10bulletinsToday.length() > 0   %>
+	   <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneToday) %>	
+	   <%= render(:partial => "print_section", :collection => @year10bulletinsToday) %>
+      <% else %>
+          <tr><td style="font-weight:bold; font-size:13px">No new bulletins today</td></tr>
+      <% end %>
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Repeated bulletins<hr /></td></tr>
+	<%= render(:partial => "print_section", :collection => @bulletins_to_everyoneRepeated) %>	
+	<%= render(:partial => "print_section", :collection => @year10bulletinsRepeated) %>
+</table>
+<p style="page-break-before: always">
+
+
+
+<p style="font-size:24px; font-weight:bold">Year 11 Pupil Bulletin<br /><%=nice_date(@today)%></p>
+<hr />
+<table width="100%">
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Today's bulletins<hr /></td></tr>
+       <% if @bulletins_to_everyoneToday.length() > 0 or @year11bulletinsToday.length() > 0   %>	
+         <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneToday) %>	
+         <%= render(:partial => "print_section", :collection => @year11bulletinsToday) %>
+      <% else %>
+          <tr><td style="font-weight:bold; font-size:13px">No new bulletins today</td></tr>
+      <% end %>
+    <tr><td colspan="2" style="font-weight:bold; font-size:15px"><br />Repeated bulletins<hr /></td></tr>
+    <%= render(:partial => "print_section", :collection => @bulletins_to_everyoneRepeated) %>	
+	<%= render(:partial => "print_section", :collection => @year11bulletinsRepeated) %>
+</table>
+
+</span>
+
+<script>window.print();</script>
