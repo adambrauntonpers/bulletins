@@ -33,3 +33,4 @@ gem 'ruby-net-ldap', :require => 'net/ldap'
 
 gem "rack", ">= 1.6.11"
 gem "mail", ">= 2.5.5"
+gem "activesupport", ">= 4.1.11"
