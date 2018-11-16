@@ -31,3 +31,4 @@ gem 'ruby-net-ldap', :require => 'net/ldap'
 #   gem 'webrat'
 # end
 
+gem "rack", ">= 1.6.11"
